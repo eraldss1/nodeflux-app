@@ -1,3 +1,0 @@
-E:/Nodeflux/crow_resize_image/build/CMakeFiles/CrowResizeImage.dir
-E:/Nodeflux/crow_resize_image/build/CMakeFiles/ALL_BUILD.dir
-E:/Nodeflux/crow_resize_image/build/CMakeFiles/ZERO_CHECK.dir

@@ -5,6 +5,6 @@ project(CrowResizeImage)
 find_package(Crow CONFIG REQUIRED)
 find_package(OpenCV REQUIRED)
 
-add_executable(CrowResizeImage "main.cpp")
+add_executable(main "main.cpp")
 
-target_link_libraries(CrowResizeImage PUBLIC Crow::Crow ${OpenCV_LIBS})
+target_link_libraries(main PUBLIC Crow::Crow ${OpenCV_LIBS})
