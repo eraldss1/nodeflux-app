@@ -1,0 +1,10 @@
+^E:\NODEFLUX\CROW_RESIZE_IMAGE\BUILD\CMAKEFILES\F25814A83EA3866655DDC279E45006BC\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Nodeflux/crow_resize_image -BE:/Nodeflux/crow_resize_image/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Nodeflux/crow_resize_image/build/CrowResizeImage.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

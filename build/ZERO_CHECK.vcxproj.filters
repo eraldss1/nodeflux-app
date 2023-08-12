@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Nodeflux\crow_resize_image\build\CMakeFiles\f25814a83ea3866655ddc279e45006bc\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{404820F4-E64C-3565-B220-34BF9F57F2CE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
