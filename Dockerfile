@@ -5,33 +5,34 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install required packages
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     cmake \
     g++ \
     git \
-    libopencv-dev \
     wget \
-    curl \
     zip \
     unzip \
+    curl \
     tar \
+    libopencv-dev \
+    python3-opencv \
     && rm -rf /var/lib/apt/lists/*
 
+# Clone your project's repository
+RUN git clone https://github.com/eraldss1/nodeflux-app.git /app/crow-resize-image
+
 # Install vcpkg
-RUN git clone https://github.com/Microsoft/vcpkg.git /app/vcpkg
+RUN git clone https://github.com/microsoft/vcpkg.git /app/vcpkg
 WORKDIR /app/vcpkg
 RUN ./bootstrap-vcpkg.sh
 
-# Install Crow using vcpkg
+# Install Crow and OpenCV using vcpkg
 RUN ./vcpkg install crow
 
-# Clone your project's repository
-RUN git clone https://github.com/eraldss1/nodeflux-app.git /app/crow_resize_image
-
 # Build your Crow application
-WORKDIR /app/crow_resize_image
+WORKDIR /app/crow-resize-image
 RUN mkdir build
-WORKDIR /app/crow_resize_image/build
+WORKDIR /app/crow-resize-image/build
 RUN cmake -DCMAKE_TOOLCHAIN_FILE=/app/vcpkg/scripts/buildsystems/vcpkg.cmake ..
 RUN cmake --build .
 
