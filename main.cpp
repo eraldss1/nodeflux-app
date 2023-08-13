@@ -43,7 +43,7 @@ int main()
             return crow::response(500, error_response);
         } });
 
-    app.bindaddr("127.0.0.1").port(18080).multithreaded().run();
+    app.port(8080).multithreaded().run();
 }
 
 std::string resizeImage(const std::string &input_jpeg, int desired_width, int desired_height)
